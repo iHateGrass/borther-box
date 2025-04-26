@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brother Box | علب كرتونية</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Screenshot 2025-04-26 at 17-11-19 BROTHER BOX EMBALLAGE ✨ (@brother._.box) • Instagram photos and videos.png" alt="Brother Box Logo">
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>علب كرتونية بجودة عالية ومقاسات متعددة</h1>
+            <p>توفر لكم شركة "Brother Box" أفضل الحلول للتغليف والشحن لتجارتكم الإلكترونية</p>
+            <a href="#order" class="cta-button">اطلب الآن</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="Screenshot 2025-04-26 at 17-11-12 BROTHER BOX EMBALLAGE ✨ (@brother._.box) • Instagram photos and videos.png" alt="صناديق كرتون" class="category-img">
+                    <div class="category-title">صناديق كرتون</div>
+                </div>
+                <div class="category-card">
+                    <img src="Screenshot 2025-04-26 at 17-11-27 BROTHER BOX EMBALLAGE ✨ (@brother._.box) • Instagram photos and videos.png" alt="أكياس شحن" class="category-img">
+                    <div class="category-title">أكياس شحن</div>
+                </div>
+                <div class="category-card">
+                    <img src="/api/placeholder/400/300" alt="شريط لاصق" class="category-img">
+                    <div class="category-title">شريط لاصق</div>
+                </div>
+                <div class="category-card">
+                    <img src="/api/placeholder/400/300" alt="مواد تغليف" class="category-img">
+                    <div class="category-title">مواد تغليف</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">المنتجات الأكثر طلباً</h2>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="1">
+                    <img src="/api/placeholder/400/350" alt="صندوق كرتون متوسط" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">صندوق كرتون متوسط (30×20×10)</h3>
+                        <div class="product-price">
+                            <span class="current-price">9,900 د.ج</span>
+                            <span class="old-price">22,000 د.ج</span>
+                            <span class="discount">55%</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderForm()">اطلب الآن</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="2">
+                    <img src="/api/placeholder/400/350" alt="حقيبة رجال الأعمال" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">مواد تغليف</h3>
+                        <div class="product-price">
+                            <span class="current-price">14,500 د.ج</span>
+                            <span class="old-price">25,000 د.ج</span>
+                            <span class="discount">42%</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderForm()">اطلب الآن</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="3">
+                    <img src="/api/placeholder/400/350" alt="أكياس شحن" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">أكياس شحن ملونة (مجموعة من 50)</h3>
+                        <div class="product-price">
+                            <span class="current-price">6,500 د.ج</span>
+                            <span class="old-price">12,000 د.ج</span>
+                            <span class="discount">45%</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderForm()">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <h2 class="section-title">اطلب الآن - الدفع عند الاستلام</h2>
+            <div class="order-form">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="fullName">الاسم بالكامل</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">العنوان كامل</label>
+                        <textarea id="address" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="province">الولاية</label>
+                        <select id="province" class="form-control" required>
+                            <option value="">اختر الولاية</option>
+                            <option value="58">ولاية وهران</option>
+                            <option value="16">ولاية الجزائر</option>
+                            <option value="31">ولاية وهران</option>
+                            <option value="19">ولاية سطيف</option>
+                            <option value="9">ولاية البليدة</option>
+                            <option value="15">ولاية تيزي وزو</option>
+                            <option value="34">ولاية قسنطينة</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">المنتج</label>
+                        <select id="product" class="form-control" required>
+                            <option value="">اختر المنتج</option>
+                            <option value="1">مواد تغليف (30×20×10) - 9,900 د.ج</option>
+                            <option value="2">حقيبة رجال الأعمال خفيفة الوزن - 14,500 د.ج</option>
+                            <option value="3">أكياس شحن ملونة (مجموعة من 50) - 6,500 د.ج</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الكمية</label>
+                        <div class="quantity-control">
+                            <button type="button" class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="100">
+                            <button type="button" class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        تأكيد الطلب
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button type="button" class="submit-btn whatsapp-btn" onclick="orderViaWhatsApp()">
+                        اطلب عبر الواتساب
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">من نحن</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>شركة <span class="text-primary">Brother Box</span> للتغليف</h3>
+                    <p>نحن شركة متخصصة في توفير حلول التغليف المبتكرة لتجار التجارة الإلكترونية. تأسست الشركة في عام 2020 وتهدف إلى تقديم منتجات عالية الجودة بأسعار تنافسية.</p>
+                    <p>نفتخر بتوفير مجموعة واسعة من منتجات التغليف، من الصناديق الكرتونية إلى أكياس الشحن وأشرطة التغليف، كل ذلك لضمان وصول منتجاتكم إلى عملائكم بشكل آمن وأنيق.</p>
+                </div>
+                <div class="about-img">
+                    <img src="/api/placeholder/600/400" alt="Brother Box">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="/api/placeholder/200/80" alt="Brother Box Logo">
+                    </div>
+                    <p>شركة متخصصة في توفير حلول التغليف والشحن للتجارة الإلكترونية.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#order">اطلب الآن</a></li>
+                        <li><a href="#">المنتجات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ليفراسون 58 ولاية</p>
+                    <p><i class="fas fa-phone"></i> 05 55 79 68 36</p>
+                    <p><i class="fas fa-envelope"></i> info@brotherbox.dz</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Brother Box. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Popup -->
+    <div class="product-popup" id="productPopup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <img src="/api/placeholder/600/400" alt="Product Image" class="popup-img" id="popupImg">
+            <div class="popup-details">
+                <h3 id="popupTitle">عنوان المنتج</h3>
+                <div class="product-price">
+                    <span class="current-price" id="popupPrice">0 د.ج</span>
+                    <span class="old-price" id="popupOldPrice">0 د.ج</span>
+                    <span class="discount" id="popupDiscount">0%</span>
+                </div>
+                <p id="popupDescription">وصف المنتج يظهر هنا...</p>
+                <div class="size-selection">
+                    <h4>اختر المقاس:</h4>
+                    <div class="size-options">
+                        <div class="size-option" data-size="40×30×10">40×30×10</div>
+                        <div class="size-option" data-size="30×20×10">30×20×10</div>
+                        <div class="size-option" data-size="20×20×10">20×20×10</div>
+                        <div class="size-option" data-size="15×15×10">15×15×10</div>
+                    </div>
+                </div>
+                <div class="quantity-control">
+                    <button type="button" class="quantity-btn" onclick="decreasePopupQuantity()">-</button>
+                    <input type="number" id="popupQuantity" class="quantity-input" value="1" min="1" max="100">
+                    <button type="button" class="quantity-btn" onclick="increasePopupQuantity()">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCartFromPopup()">أضف إلى السلة</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Cart functionality
+        let cartItems = [];
+        let selectedSize = null;
+        
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const province = document.getElementById('province').value;
+            const product = document.getElementById('product').value;
+            const productName = document.getElementById('product').options[document.getElementById('product').selectedIndex].text;
+            const quantity = document.getElementById('quantity').value;
+            
+            // Prepare email content (this would be sent to an email service in a real implementation)
+            const emailBody = `
+                طلب جديد:
+                
+                الاسم: ${fullName}
+                الهاتف: ${phone}
+                العنوان: ${address}
+                الولاية: ${province}
+                المنتج: ${productName}
+                الكمية: ${quantity}
+            `;
+            
+            // In a real implementation, you would send this to an email service
+            // For demo purposes, we'll show an alert
+            alert('تم استلام طلبك بنجاح! سنتصل بك قريباً لتأكيد الطلب.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // WhatsApp order function
+        function orderViaWhatsApp() {
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const province = document.getElementById('province').value;
+            const product = document.getElementById('product').value;
+            const productName = document.getElementById('product').options[document.getElementById('product').selectedIndex].text;
+            const quantity = document.getElementById('quantity').value;
+            
+            if (!fullName || !phone || !address || !province || !product) {
+                alert('الرجاء ملء جميع الحقول المطلوبة');
+                return;
+            }
+            
+            // Prepare WhatsApp message
+            const whatsappMessage = `طلب جديد:
+الاسم: ${fullName}
+الهاتف: ${phone}
+العنوان: ${address}
+الولاية: ${province}
+المنتج: ${productName}
+الكمية: ${quantity}`;
+            
+            // WhatsApp business number - replace with your actual number
+            const whatsappNumber = '213555796836';
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+        }
+        
+        // Quantity control functions
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+        
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+        
+        function increasePopupQuantity() {
+            const quantityInput = document.getElementById('popupQuantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+        
+        function decreasePopupQuantity() {
+            const quantityInput = document.getElementById('popupQuantity');
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+        
+        // Popup functions
+        function openPopup(productId) {
+            const productData = {
+                1: {
+                    title: 'صندوق كرتون متوسط (30×20×10)',
+                    price: '9,900 د.ج',
+                    oldPrice: '22,000 د.ج',
+                    discount: '55%',
+                    description: 'صندوق كرتون متوسط الحجم مثالي للشحن والتوصيل. مصنوع من مواد عالية الجودة ومتين للحفاظ على سلامة المنتجات أثناء النقل.',
+                    image: '/api/placeholder/600/400'
+                },
+                2: {
+                    title: 'مواد تغليف',
+                    price: '1,500 د.ج',
+                    oldPrice: '2,500 د.ج',
+                    discount: '42%',
+                    description: 'غليف نايلون سانيتا مصنوع من مواد عاليه الجوده فهو متين ويعمل على حفظ الأطعمة بشكل محكم ومثالي.',
+                    image: '/api/placeholder/600/400'
+                },
+                3: {
+                    title: 'أكياس شحن ملونة (مجموعة من 50)',
+                    price: '6,500 د.ج',
+                    oldPrice: '12,000 د.ج',
+                    discount: '45%',
+                    description: 'مجموعة من 50 كيس شحن ملون بأحجام مختلفة. مثالية للشحن والتوصيل لمتاجر التجارة الإلكترونية.',
+                    image: '/api/placeholder/600/400'
+                }
+            };
+            
+            const product = productData[productId];
+            
+            document.getElementById('popupTitle').textContent = product.title;
+            document.getElementById('popupPrice').textContent = product.price;
+            document.getElementById('popupOldPrice').textContent = product.oldPrice;
+            document.getElementById('popupDiscount').textContent = product.discount;
+            document.getElementById('popupDescription').textContent = product.description;
+            document.getElementById('popupImg').src = product.image;
+            document.getElementById('popupImg').alt = product.title;
+            
+            document.getElementById('productPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePopup() {
+            document.getElementById('productPopup').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Size selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedSize = this.getAttribute('data-size');
+            });
+        });
+        
+        // Open order form when clicking "Order Now"
+        function openOrderForm() {
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Product click to open popup
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product-id');
+                openPopup(productId);
+            });
+        });
+        
+        // When the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default selected size
+            if (document.querySelector('.size-option')) {
+                document.querySelector('.size-option').classList.add('selected');
+                selectedSize = document.querySelector('.size-option').getAttribute('data-size');
+            }
+            
+            // Update cart count
+            updateCartCount();
+        });
+        
+        // Add to cart functions
+        function addToCartFromPopup() {
+            const title = document.getElementById('popupTitle').textContent;
+            const price = document.getElementById('popupPrice').textContent;
+            const quantity = document.getElementById('popupQuantity').value;
+            const size = selectedSize;
+            
+            const item = {
+                title,
+                price,
+                quantity,
+                size
+            };
+            
+            cartItems.push(item);
+            updateCartCount();
+            
+            alert(`تمت إضافة ${title} إلى السلة`);
+            closePopup();
+        }
+        
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = cartItems.length;
+        }
+    </script>
+</body>
+</html>
